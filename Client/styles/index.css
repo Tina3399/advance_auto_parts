@@ -1,0 +1,459 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: TT_Norms_Pro,-apple-system,BlinkMacSystemFont,Helvetica Neue,Segoe UI,Roboto,Oxygen-Sans,Fira Sans,Droid Sans,Ubuntu,Cantarell,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol;
+}
+
+/* navbar */
+
+#navBar{
+  display: flex;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  
+  /* border: 2px solid red; */
+  /* justify-content: center; */
+  /* align-items: center; */
+}
+#logoImgDiv{
+    width: 17%;
+    /* border: 3px solid black; */
+    height: 60px;
+}
+
+#logoImgDiv>img{
+    width: 100%;
+    height: 100%;
+}
+#searchCarLogoDiv{
+    display: flex;
+    width: 35%;
+    justify-content: space-around;
+    background-color: #FFCC00;
+    height: 35px;
+    align-items: center;
+    border-radius: 5px;
+}
+#searchCarLogoDiv>i{
+    font-size: 30px;
+}
+#searchCarLogoDiv>p{
+    margin-top: 5px;
+}
+
+#navBarSecondInnerDiv{
+    border: 2px solid black;
+    width: 100%;
+    height: 60px;
+    background-color: #373737;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.navBarOptions{
+    display: flex;
+    width: 15%;
+    margin-left: 15px;
+    justify-content:space-around;
+    background-color: #4b4b4b;
+    color: white;
+    font-size: 15px;
+    height: 35px;
+    cursor: pointer;
+    align-items: center;
+    border-radius: 4px;
+}
+.navBarOptions>i{
+    font-size: 12px;
+    cursor: pointer;
+
+}
+.navBarOptions>button{
+   color: white;
+    background-color: #4b4b4b;
+    border: 0;
+}
+
+#navBarOptionsCart{
+    width: 5%;
+    color: white;
+}
+
+/* input box css */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+
+body{
+    background-color: #efefef;
+  font-family: 'Open Sans', sans-serif;
+}
+
+#searchBoxDiv{
+    display: flex;
+    width: 60%;
+    /* border: 1px solid red; */
+    background-color: white;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+
+.search {
+  width: 95%;
+  position: relative;
+  display: flex;
+}
+
+.searchTerm {
+  width: 100%;
+  /* border: 3px solid #FFCC00; */
+  border-right: none;
+  padding: 5px;
+  height: 35px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  border: 0;
+  color: #9DBFAF;
+}
+
+.searchTerm:focus{
+  color: black;
+}
+
+.searchButton {
+  width: 50px;
+  height: 35px;
+  border: 1px solid #FFCC00;
+  background: #FFCC00;
+  text-align: center;
+  color: #fff;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+/*Resize the wrap to see the search bar change!*/
+.wrap{
+  width: 90%;
+  /* transform: translate(-50%, -50%); */
+}
+
+/* 1st section */
+
+#first_banner{
+    margin-top: 60px;
+    width: 100%;
+}
+#first_banner>img{
+    width: 100%;
+}
+
+#second_banner{
+    width: 100%;
+    margin-top: -4px;
+}
+#second_banner>img{
+    width: 100%;
+}
+
+/* second banner */
+
+#categoriesSection{
+    padding: 25px;
+    margin-left: 10px;
+}
+
+#categoriesHeading{
+      font-size: 30px;
+      font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,system-ui;
+      /* font-weight: 1000; */
+}
+
+#categoriesBold{
+    font-weight: 900;
+}
+#categoriesDiv{
+    display: flex;
+    overflow: scroll;
+    /* gap: 30px; */
+    cursor: pointer;
+
+    
+}
+
+
+#categoriesDiv::-webkit-scrollbar{
+    display: none;
+}
+
+.categoryDivCard{
+    background-color: white;
+    /* border-radius: 50px 5px 5px 5px; */
+    padding: 5px 25px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 15px -3px, rgba(0, 0, 0, 0.05) 0px 4px 6px -2px;
+    position:relative; 
+    margin-left: 32px;
+        /* width: 200px;
+        height: 80px; */
+        background-color: white;
+}
+.categoryDivCard:after {
+    content: "";
+    position:absolute;
+    /* margin:-20px; */
+    top:-20px;
+    left: -20px;
+    width:40px;
+    height:40px;
+    transform:rotate(45deg);
+    background-color:#EFEFEF; /* to see where it is */
+  }
+
+
+.categoryDivImgDiv{
+    width: 200px;
+    padding: 15px;
+    height: 100%;
+}
+.categoryDivImgDiv>h3{
+    font-weight: 800;
+    text-align: center;
+ }
+.categoryDivImgDiv>img{
+    width: 100%;
+    
+    transition: 0.5s all ease-in-out;
+}
+.categoryDivImgDiv:hover img{
+    cursor: pointer;
+    transform: scale(0.9);
+
+}
+
+
+/* third banner */
+
+          /* outer Div */
+.outerDiv{
+    
+margin-left: 20px;
+}
+
+   
+         
+    /* inner div : 1 */
+#multipleServicesDiv{
+    display: grid;
+    margin-top: 30px;
+    grid-template-columns: repeat(6,20%);
+    overflow: scroll;
+    /* gap: 20px; */
+}
+
+#multipleServicesDiv::-webkit-scrollbar{
+    display: none;
+}
+
+          /* inner Div : 2 */
+.mainDivServices{
+  /* border: 2px solid yellow; */
+  padding: 30px 25px;
+  /* width: 500px; */
+  position: relative;
+  background-color: #2b2727;
+  margin-top: 20px;
+  height: 200px;
+  border-radius: 12px;
+  font-family: "Open Sans",sans-serif;
+
+}
+.mainDivServices>h3{
+    color: #FFCC00;
+}
+.mainDivServices>p{
+    color: white;
+}
+.iconDiv{
+    position: absolute;
+    top:-20px;
+    border: 4px solid #FFCC00;
+    border-radius: 50%;
+    padding: 10px;
+    background-color: black;
+}
+.iconDiv i{
+    /* background-color: blue; */
+    /* border: 2px solid red; */
+    color:  white;
+    background-color: black;
+    font-size: 20px;
+}
+
+/* fourth banner */
+
+#savingsDivHeading{
+    font-size: 40px;
+    padding: 20px;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,system-ui;
+}
+
+#savingsDivHeading>span{
+    font-weight: 900;
+}
+
+#savingsDiv{
+    display: flex;
+    margin-left: 20px;
+    gap: 20px;
+    font-family: "Open Sans",sans-serif;
+    overflow: scroll;
+}
+#savingsDiv::-webkit-scrollbar{
+    display: none;
+}
+
+#savingsDiv>div{
+    /* border: 2px solid red; */
+    padding-bottom: 15px;
+    border-radius: 15px;
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 4px 16px, rgba(17, 17, 26, 0.05) 0px 8px 32px;
+
+}
+#savingsDiv h1{
+    text-align: center;
+    font-size: 25px;
+    margin-top: 20px;
+}
+#savingsDiv p{
+    text-align: center;
+    font-size: 24px;
+    line-height: 30px;
+    margin-top: 5px;
+}
+.savingsImgDiv{
+    width: 295px;
+    height: 250px;
+}
+
+.savingsImgDiv>img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+/* fifth banner */
+
+.fifthBannerImageDiv{
+    width: 100%;
+}
+.fifthBannerImageDiv>img{
+    width: 100%;
+}
+
+/* footer */
+.footer{
+    line-height: 25px;
+    background-color:white;
+    /* border:5px solid red; */
+}
+
+
+
+.heading{
+    color: #373737;
+    font-weight: bold;
+    line-height: 40px;
+}
+
+.row1{
+    display: flex;
+    justify-content: center;
+    gap:40px;
+    align-items: center;
+ 
+}
+.footer li{
+    list-style: none;
+}
+
+.footer li:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.footer p{
+    color: #666666;
+}
+
+
+/* footer */
+
+
+
+
+
+.row3{
+    display: flex;
+    margin: auto;
+    width: 90%;
+    padding: 20px;
+    border-top: 0.001px solid #2e373b;
+    justify-content: space-between;
+    /* border:5px solid brown; */
+}
+
+.store{
+    display: flex;
+    margin-top: 10px;
+}
+
+.store>div>img{
+    height: 85%;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+
+.links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid red; */
+}
+
+.links>div{
+    /* margin-right: 30px; */
+    font-size: 18px;
+    color: white;   
+}
+
+.links>div:hover{
+    color: #43e2cd;
+    cursor: pointer;
+}
+
+.copywright{
+    display: flex;
+    color: #b9cfdb;
+    /* justify-content: flex-end; */
+    /* border: 5px solid black; */
+}
+.copywright>div{
+    display: flex;
+    color: #b9cfdb;
+    /* justify-content: flex-end; */
+    /* border: 5px solid black; */
+}
+.tc{
+    border-bottom: 1px solid white;
+    color: white;
+}
+
+.tc:hover{
+    color: #a7b1c2;
+    border: none;
+    cursor: pointer;
+}
