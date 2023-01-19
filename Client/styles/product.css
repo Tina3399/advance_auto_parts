@@ -1,0 +1,34 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#topHead{
+    margin-top: 70px;
+    margin-left: 1%;
+
+}
+
+#mainDiv{
+    display: flex;
+}
+.categories{
+    display: flex;
+    flex-direction: column;
+}
+
+#leftSection{
+    border: 2px solid purple;
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    
+}
+
+#rightSection{
+    border: 2px solid red;
+    width: 70%;
+    display: grid;
+    grid-template-columns: repeat(2,50%);
+}

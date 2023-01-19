@@ -1,6 +1,31 @@
 const categoriesDiv = document.getElementById("categoriesDiv");
 const multipleServicesDiv = document.getElementById("multipleServicesDiv");
+
 const categoriesArr = [
+  {
+    imageUrl:
+      "https://shop.advanceautoparts.com/wcsstore/CVWEB/Attachment/staticbusinesscontent/image/landing/battery/diehard/HP-Category-Grid-DieHard-Gold-95x95.jpg",
+    name: "Batteries",
+    category: "Battery",
+  },
+  {
+    imageUrl:
+      "https://shop.advanceautoparts.com/wcsstore/CVWEB/Attachment/staticbusinesscontent/image/home/TC-Brakes.jpg",
+    name: "Brake Pads & Shoes",
+    category: "Brake Pads & Shoes",
+  },
+  {
+    imageUrl:
+      "https://shop.advanceautoparts.com/wcsstore/CVWEB/Attachment/staticbusinesscontent/image/2018/07/air-filter.jpg",
+    name: "Engine Air Filters",
+    category: "Engine Air Filters",
+  },
+  {
+    imageUrl:
+      "https://shop.advanceautoparts.com/wcsstore/CVWEB/Attachment/staticbusinesscontent/image/home/hm-topcat-wipers.jpg",
+    name: "Wipers",
+    category: "Wiper Blades",
+  },
   {
     imageUrl:
       "https://shop.advanceautoparts.com/wcsstore/CVWEB/Attachment/staticbusinesscontent/image/home/flyer-lg.jpg",
@@ -11,21 +36,13 @@ const categoriesArr = [
       "https://shop.advanceautoparts.com/wcsstore/CVWEB/Attachment/staticbusinesscontent/image/home/18-Driveworks-Fuel-Filter.jpg",
     name: "Small Engine",
   },
-  {
-    imageUrl:
-      "https://shop.advanceautoparts.com/wcsstore/CVWEB/Attachment/staticbusinesscontent/image/2018/07/air-filter.jpg",
-    name: "Engine Air Filters",
-  },
+
   {
     imageUrl:
       "https://shop.advanceautoparts.com/wcsstore/CVWEB/Attachment/staticbusinesscontent/image/home/TC-FRAM-Oil-and-Filter.jpg",
     name: "Oil Change Bundles",
   },
-  {
-    imageUrl:
-      "https://shop.advanceautoparts.com/wcsstore/CVWEB/Attachment/staticbusinesscontent/image/home/hm-topcat-wipers.jpg",
-    name: "Wipers",
-  },
+
   {
     imageUrl:
       "https://shop.advanceautoparts.com/wcsstore/CVWEB/Attachment/staticbusinesscontent/image/2018/07/brake-rotors.jpg",
@@ -36,21 +53,13 @@ const categoriesArr = [
       "https://shop.advanceautoparts.com/wcsstore/CVWEB/Attachment/staticbusinesscontent/image/home/04-CQ-Radiator.jpg",
     name: "Radiators",
   },
-  {
-    imageUrl:
-      "https://shop.advanceautoparts.com/wcsstore/CVWEB/Attachment/staticbusinesscontent/image/home/TC-Brakes.jpg",
-    name: "Brake Pads & Shoes",
-  },
+
   {
     imageUrl:
       "https://shop.advanceautoparts.com/wcsstore/CVWEB/Attachment/staticbusinesscontent/image/home/TC-ShocksStruts.jpg",
     name: "Shocks & Struts",
   },
-  {
-    imageUrl:
-      "https://shop.advanceautoparts.com/wcsstore/CVWEB/Attachment/staticbusinesscontent/image/landing/battery/diehard/HP-Category-Grid-DieHard-Gold-95x95.jpg",
-    name: "Batteries",
-  },
+
   {
     imageUrl:
       "	https://shop.advanceautoparts.com/wcsstore/CVWEB/Attachment/staticbusinesscontent/image/2018/07/spark-plugs.jpg",
@@ -109,6 +118,9 @@ function showCategories() {
 
     imgDiv.append(image, name);
     card.append(imgDiv);
+    card.addEventListener("click", () => {
+      showProducts(el.category);
+    });
     categoriesDiv.append(card);
   });
 
@@ -130,4 +142,20 @@ function showCategories() {
     outerDiv.append(mainDivServices);
     multipleServicesDiv.append(outerDiv);
   });
+}
+
+// onclicking the category products should be shown on the product page
+
+function showProducts(category) {
+  // console.log(category);
+  fetch("https://63c59ffce1292e5bea27a4a8.mockapi.io/products")
+    .then((res) => res.json())
+    .then((data) => {
+      // console.log(data.category);
+      // console.log(data);
+      const filteredData = data.filter((el) => el.category === category);
+      console.log(filteredData);
+      localStorage.setItem("productsData", JSON.stringify(filteredData));
+      window.location.href = "products.html";
+    });
 }
