@@ -56,7 +56,7 @@
 
 .navBarOptions{
     display: flex;
-    width: 15%;
+    width: 12%;
     margin-left: 15px;
     justify-content:space-around;
     background-color: #4b4b4b;
@@ -66,6 +66,10 @@
     cursor: pointer;
     align-items: center;
     border-radius: 4px;
+}
+.navBarOptions a{
+    text-decoration: none;
+    color:  white;
 }
 .navBarOptions>i{
     font-size: 12px;
