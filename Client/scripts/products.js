@@ -1,7 +1,7 @@
 const rightSection = document.getElementById("rightSection");
 const productsData = JSON.parse(localStorage.getItem("productsData"));
 const paginationWrapper = document.getElementById("paginationWrapper");
-const baseUrl = "https://63c59ffce1292e5bea27a4a8.mockapi.io/products";
+const baseUrl = "https://63c59ffce1292e5bea27a4a8.mockapi.io/products?limit=10&page=1";
 const cartProductsArr = JSON.parse(localStorage.getItem("cartProd")) || [];
 const totalCount = productsData.length;
 showProducts();
@@ -9,11 +9,13 @@ showProducts();
 function showProducts() {
   productsData.forEach((item) => {
     const container = document.createElement("div");
+    container.setAttribute("id","_container")
     const imgDiv = document.createElement("div");
+    imgDiv.setAttribute("id","_imgDiv")
     const image = document.createElement("img");
     image.src = item.image;
     const price = document.createElement("p");
-    price.textContent = item.price;
+    price.textContent ="$"+ item.price;
     const brandName = document.createElement("h3");
     brandName.textContent = item.title;
     const description = document.createElement("p");

@@ -17,4 +17,3 @@ form.addEventListener("submit", (e) => {
   }
 });
 
-// form validation

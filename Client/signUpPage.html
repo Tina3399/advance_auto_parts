@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/signUpPage.css">
+</head>
+
+
+<body>
+    <div id="navbar-signup">
+        <nav>
+            <img src="./logo4.jpg" alt="Logo" id="logo">
+
+        </nav>
+        <div id="closebtn"><a href=""> Close X</a></div>
+
+    </div>
+
+    <!-- Form and image div is inside this -->
+    <div id="Maindiv">
+        <div id="Formdiv">
+            <h2 id="heading">Sign Up</h2>
+            <form id="form" action="">
+                <div id="for4inputs">
+                    <div>
+                        <label for="">First Name</label> <br>
+                        <input id="input1" type="text" placeholder="Enter First Name">
+                    </div>
+                    <div>
+                        <label for="">Last Name</label> <br>
+                        <input id="input2" type="text" placeholder="Enter Last Name">
+                    </div>
+                    <div>
+                        <label for="">Email Address</label> <br>
+                        <input id="input3" type="email" placeholder="Enter Email Address">
+                    </div>
+                    <div>
+                        <label for="">Mobile Number</label> <br>
+                        <input id="input4" type="number" placeholder="Enter Mobile Number">
+
+
+                    </div>
+                    <div>
+                        <label for="">Password</label> <br>
+                        <input id="input5" type="password" placeholder="Enter Password">
+                    </div>
+                    <div id="passreq">
+                        <ul>
+                            <li>Use at least 6 characters</li>
+                            <li>Use at least 1 number</li>
+                            <li>Use at least 1 letter</li>
+                            <li>Use at least 1 special character (e.g., !@#$%^)</li>
+                            <li>Do not use any character 4 or more times in a row</li>
+                            <li>Do not use any character more than 4 times</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div id="checkbox1">
+                    <input type="checkbox" name="" id="C1">
+                    <label for="">Send me emails with special offers, exclusives, and promotions</label>
+
+                </div>
+
+                <div id="checkbox2">
+                    <input type="checkbox" name="" id="C2">
+                    <label for="">Send me text messages with offers, exclusives & promotions</label>
+
+                </div>
+
+                <div>
+                    <input type="submit" id="signUpBtn" value="Sign Up">
+
+                </div>
+                <div id="instructions">
+                    <p>* By creating this account, I agree to the <u>Terms of Service</u> .
+                    </p> <br>
+                    <p> ** By choosing to receive text messages, the customer agrees to receive auto-dialed text
+                        messages from Advance Auto Parts relating to Speed Perks Rewards. Message and data rates may
+                        apply. Reward and reminder messages will be sent based on qualified rewards earned. See <u>Terms
+                            and Conditions</u> and <u>Privacy Policy</u> .</p>
+                </div>
+
+            </form>
+            <br>
+            <hr style="max-width: 490px; margin-left: 75px; margin-bottom: 15px;">
+
+        </div>
+        <div id="banner">
+            <img src="https://shop.advanceautoparts.com/images/speedperks-rewards-banner.png" alt="">
+        </div>
+
+</body>
+<script src="scripts/signUpPage.js"></script>
+
+</html>

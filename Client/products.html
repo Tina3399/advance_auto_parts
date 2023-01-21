@@ -15,49 +15,50 @@
     <title>Document</title>
   </head>
   <body>
-    <!-- navbar -->
-    <nav id="navBar">
-      <div id="logoImgDiv">
-        <img src="assets/images/Logo.png" alt="" />
-      </div>
-      <div id="navBarSecondInnerDiv">
-        <div id="searchBoxDiv">
-          <div id="searchCarLogoDiv">
-            <i class="fa-solid fa-car"></i>
-            <p>Search</p>
-          </div>
-          <div class="wrap">
-            <div class="search">
-              <input
-                type="text"
-                class="searchTerm"
-                placeholder="What part do you need today?"
-              />
-              <button type="submit" class="searchButton">
-                <i class="fa fa-search"></i>
-              </button>
-            </div>
-          </div>
+ 
+
+<!-- navbar -->
+<nav id="navBar">
+  <div id="logoImgDiv" >
+    <a href="index.html"> <img src="assets/images/Logo.png" alt=""></a> 
+  </div>
+  <div id="navBarSecondInnerDiv">
+  <div id="searchBoxDiv">
+    <div id="searchCarLogoDiv">
+        <i class="fa-solid fa-car"></i>
+        <p>Search</p>
+
+    </div>
+    <div class="wrap">
+        <div class="search">
+           <input type="text" class="searchTerm" placeholder="What part do you need today?">
+           <button type="submit" class="searchButton">
+             <i class="fa fa-search"></i>
+          </button>
         </div>
-        <div class="navBarOptions">
-          <i class="fa-solid fa-location-dot"></i>
-          <button><a href="">Choose a Store</a></button>
-        </div>
-        <div class="navBarOptions">
-          <i class="fa-solid fa-user"></i>
-          <button><a href="">Account</a></button>
-        </div>
-        <div class="navBarOptions" id="navBarOptionsCart">
-          <i class="fa-solid fa-cart-shopping"></i>
-          <p>0</p>
-        </div>
-        <div class="navBarOptions">
-          <i class="fa-solid fa-user"></i>
-          <button><a href="adminLogin.html">Admin</a></button>
-        </div>
-        <div></div>
-      </div>
-    </nav>
+     </div>
+  </div>
+  <div class="navBarOptions">
+    <i class="fa-solid fa-location-dot"></i>
+    <button><a href="">Choose a Store</a></button>
+  </div>
+  <div class="navBarOptions">
+    <i class="fa-solid fa-user"></i>
+    <button><a href="">Account</a></button>
+  </div>
+  <div class="navBarOptions" id="navBarOptionsCart">
+    <i class="fa-solid fa-cart-shopping"></i>
+    <p>0</p>
+  </div>
+  <div class="navBarOptions">
+    <i class="fa-solid fa-user"></i>
+    <button><a href="adminLogin.html">Admin</a></button>
+  </div>
+  <div>
+</div>
+  </div>
+</nav>
+
     <!-- section :1 -->
 
     <p id="topHead">
@@ -65,163 +66,205 @@
       / Air Filter
     </p>
 
-    <!-- main -->
-    <div id="mainDiv">
-      <!-- left section -->
-      <div id="leftSection">
-        <div class="categories">
-          <h3>Category</h3>
-          <input type="checkbox" name="batteries" />
-
-          <label for="batteries">Battery</label>
-
-          <input type="checkbox" name="brakes" />
-          <label for="brakes">Brake Pads & Shoes</label>
-          <input type="checkbox" name="filters" />
-          <label for="filters">Engine Air Filters</label>
-          <input type="checkbox" name="wipers" />
-          <label for="wipers">Wiper Blades</label>
-        </div>
-        <div class="categories">
-          <h3>Brand</h3>
-          <input type="checkbox" name="1" />
-          <label for="1">DieHard Red</label>
-          <input type="checkbox" name="2" />
-          <label for="2">Braille Battery</label>
-          <input type="checkbox" name="3" />
-          <label for="3">FRAM Drive</label>
-          <input type="checkbox" name="4" />
-          <label for="4">Champion</label>
-          <input type="checkbox" name="5" />
-          <label for="5">Sierra</label>
-          <input type="checkbox" name="6" />
-          <label for="6">Driveworks</label>
-          <input type="checkbox" name="7" />
-          <label for="7">Purolator</label>
-        </div>
-        <div class="categories">
-            <h3>Price</h3>
-            <input type="checkbox" name="10" value="10" />
-            <label for="10">Less than $10</label>
-            <input type="checkbox" name="12" />
-            <label for="12">$10 - $24.99</label>
-            <input type="checkbox" name="13" />
-            <label for="13">$25 - $49.99</label>
-            <input type="checkbox" name="14" />
-            <label for="14">$50 - $99.99</label>
-            <input type="checkbox" name="15" />
-            <label for="15">$100 and up</label>
-            
-          </div>
-      </div>
-
+<!-- sort/filter buttons -->
+  <!-- <div id="pre_loader"></div> -->
+  <div id="menu_page_items">
+    <div id="1"  class="food_cards">
+      <div class="heading_feature_card_filter">
+        <h3>Category : </h3>
+        <select id="filter">
+          <option value="">Display All</option>
+          <option value="lth">Battery</option>
+          <option value="htl">Brake Pads & Shoes</option>
+          <option value="htl">Engine Air Filters</option>
+          <option value="htl">Wiper Blades</option>
+      </select>
+      <h3>Brand : </h3>
+      <select id="filter">
+        <option value="">Display All</option>
+        <option value="lth">Braille Battery</option>
+        <option value="htl">FRAM Drive</option>
+        <option value="htl">Champion</option>
+        <option value="htl">Sierra</option>
+        <option value="htl">Driveworks</option>
+        <option value="htl">Purolator</option>
+        <option value="htl">High To Low</option>
+    </select>
+      <h3>Price : </h3>
+      <select id="filter">
+        <option value="">Display All</option>
+        <option value="lth">$10 - $24.99</option>
+        <option value="htl">$25 - $49.99</option>
+        <option value="htl">$50 - $99.99</option>
+        <option value="htl">$100 and up</option>
+    </select>
+  </div>
+     
+<div>
       <!-- right section -->
       <div id="rightSection"></div>
       <div id="paginationWrapper"></div>
     
     </div>
+ <!-- seventh section -->
 
-    <!-- footer -->
-    <section class="footer">
-      <div class="row1">
-        <div>
+ <section class="footer_">
+  <div class="row2">
+      <div>
           <ul>
-            <li class="heading">CUSTOMER SUPPORT</li>
-            <li><p>Accessibility Statement</p></li>
-            <li><p>Contact Us</p></li>
-            <li><p>Forgot Password</p></li>
-            <li><p>Help Desk</p></li>
-            <li><p>In Store Pickup</p></li>
-            <li><p>In Store Services</p></li>
-            <li><p>Order Tracking</p></li>
-            <li><p>Recall Information</p></li>
-            <li><p>Return Policy</p></li>
-            <li><p>Same Day Delivery</p></li>
-            <li><p>UBER Driver Rewards</p></li>
+              <li class="heading">TOP REPLACEMENT PARTS</li>
+              <li><p>Brake Pads & Shoes</p></li>
+              <li><p>Brake Rotors</p></li>
+              <li><p>Alternators</p></li>
+              <li><p>Water Pumps</p></li>
+              <p style="color: #266fae ;cursor: pointer">Show All</p>
+              
           </ul>
-        </div>
-        <div>
-          <ul>
-            <li class="heading">ABOUT US</li>
-
-            <li><p>Affiliate Program</p></li>
-            <li><p>Career Opportunities</p></li>
-            <li><p>Corporate Information</p></li>
-            <li><p>Gift Cards</p></li>
-            <li><p>Investor Relations</p></li>
-            <li><p>2020 Annual Report</p></li>
-            <li><p>Annual Meeting Materials</p></li>
-            <li><p>Safety Data Sheets(SDS)</p></li>
-            <li><p>Press</p></li>
-            <li><p>Store Locator</p></li>
-          </ul>
-        </div>
-
-        <div>
-          <ul>
-            <li class="heading">PROFESSIONAL SHOPS</li>
-            <li><p>My Advance</p></li>
-            <li><p>Online Parts Ordering</p></li>
-            <li><p>TechNet Professional</p></li>
-            <li><p>Interactive Training</p></li>
-            <li><p>Interactive Vehicle Animations</p></li>
-            <li><p>Parts & Products</p></li>
-            <li><p>Promotions & Rewards</p></li>
-            <li><p>Shop Solutions</p></li>
-            <li><p>Find My Mechanic</p></li>
-          </ul>
-        </div>
-        <div>
-          <ul>
-            <li class="heading">Follow Us</li>
-            <li>
-              <i class="fa-brands fa-twitter"></i>
-              <p>Twitter</p>
-            </li>
-            <li>
-              <i class="fa-brands fa-facebook"></i>
-              <p>Facebook</p>
-            </li>
-            <li>
-              <i class="fa-brands fa-linkedin-in"></i>
-              <p>Linked-In</p>
-            </li>
-            <li>
-              <i class="fa-brands fa-youtube"></i>
-              <p>Youtube</p>
-            </li>
-            <li>
-              <i class="fa-brands fa-instagram"></i>
-              <p>Instagram</p>
-            </li>
-          </ul>
-        </div>
       </div>
 
-      <div class="row3">
+      <div>
+          <ul>
+              <li class="heading">POPULAR MAKES</li>
+              <li><p>Ford Parts</p></li>
+              <li><p>Chevrolet Parts</p></li>
+              <li><p>Honda Parts</p></li>   
+              <li><p>Dodge Parts</p></li>
+            <p style="color: #266fae ;cursor: pointer;">Show All</p>
+              
+          </ul>
+      </div>
+      <div>
+          <ul>
+              <li class="heading">ROUTINE MAINTENANCE PARTS</li>
+
+              <li><p>Spark Plugs</p></li>
+              <li><p>Car Batteries</p></li>
+              <li><p>Oil Filters</p></li>
+              <li><p>Motor Oil</p></li>
+            <p style="color: #266fae;cursor: pointer">Show All</p>
+              
+          </ul>
+      </div>
+
+      <div>
+          <ul>
+              <li class="heading">SHOP BY</li>
+              <li><p>Manufacturer Brand</p></li>
+              <li><p>Vehicle Make / Model</p></li>
+              <li><p>Performance Parts</p></li>
+              <li><p>Lawn & Garden</p></li>
+              <li><p >Motorcycle & ATV</p></li>   
+          </ul>
+      </div>
+  </div>
+
+</section>
+      <!-- footer -->
+      <section class="footer">
+       
+        <div class="row1">
+            <div>
+                <ul>
+                    <li class="heading">CUSTOMER SUPPORT</li>
+                    <li><p> Accessibility Statement</p></li>
+                    <li><p>Contact Us</p></li>
+                    <li><p>Forgot Password</p></li>
+                    <li><p>Help Desk</p></li>
+                    <li><p>In Store Pickup</p></li>
+                    <li><p>In Store Services</p></li>
+                    <li><p>Order Tracking</p></li>
+                    <li><p>Return Policy</p></li>
+                    <li><p>Same Day Delivery</p></li>
+                    <li><p>UBER Driver Rewards</p></li>
+                     
+                    
+
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <li class="heading">ABOUT US</li>
+                    <li><p>Affiliate Program</p></li>
+                    <li><p>Career Opportunities</p></li>
+                    <li><p>Corporate Information</p></li>
+                    <li><p>Gift Cards</p></li>
+                    <li><p>Investor Relations</p></li>
+                    <li><p>2020 Annual Report</p></li>
+                    <li><p>Annual Meeting Materials</p></li>
+                    <li><p>Safety Data Sheets(SDS)</p></li>
+                    <li><p>Press</p></li>  
+                    <li><p>Store Locator</p></li>
+                    
+               
+
+
+                </ul>
+            </div>
+            
+            <div>
+                <ul>
+                    <li class="heading">PROFESSIONAL SHOPS </li>
+                    <li><p>My Advance</p></li>
+                    <li><p>Online Parts Ordering</p></li>
+                    <li><p>TechNet Professional</p></li>
+                    <li><p>Interactive Training</p></li>
+                    <li><p>Interactive Vehicle Animations</p></li>
+                    <li><p>Parts & Products</p></li>
+                    <li><p>Promotions</p></li>
+                    <li><p>Rewards</p></li>  
+                    <li><p>Shop Solutions</p></li>
+                    <li><p>Find My Mechanic</p></li>    
+                 
+                
+
+                </ul>
+            </div>
+            <div>
+                <ul>
+                    <li class="heading">Follow Us</li>
+                    <li><i class="fa-brands fa-twitter"></i> <p>Twitter</p></li>
+                    <li><i class="fa-brands fa-facebook"></i> <p>Facebook</p></li>
+                    <li><i class="fa-brands fa-linkedin-in"></i><p>Linked-In</p></li>   
+                    <li><i class="fa-brands fa-youtube"></i><p>Youtube</p></li>
+                    <li><i class="fa-brands fa-instagram"></i><p>Instagram</p></li>
+                    
+                </ul>
+            </div>
+        </div>
+        
+       
+   
+    <div class="row3">
         <div class="links">
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
-          <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
         </div>
         <div class="copywright">
-          <div>
-            <p>© 2023 Advance Auto Parts</p>
-          </div>
-          <div>
-            <p class="tc">Privacy Notice</p>
-            <p class="tc">Terms Of Use</p>
-            <p class="tc">Site Map</p>
-            <p class="tc">Do Not Sell My Personal Information</p>
-          </div>
-          <div>
-            <p>ADVANCING A WORLD IN MOTION®</p>
-          </div>
+
+           <div>
+                <p class="tc">© 2023 Advance Auto Parts</p>
+            </div>
+
+            <div>
+                <p class="tc">Privacy Notice</p>
+                <p class="tc">Terms Of Use </p>
+                <p class="tc">Site Map</p>
+                <p class="tc">Do Not Sell My Personal Information</p>
+            </div>
+
+            <div>
+                <p>ADVANCING A WORLD IN MOTION®</p>
+            </div>
         </div>
-      </div>
+    </div>
     </section>
+
+
+
+
   </body>
 </html>
 <script src="scripts/products.js"></script>

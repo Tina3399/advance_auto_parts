@@ -1,0 +1,150 @@
+* {
+    margin: 5px;
+
+
+}
+
+#navbar-signup {
+    background-color: #000033;
+    display: flex;
+    justify-content: space-between;    
+}
+
+#navbar-signup a {
+    color: whitesmoke;
+    text-decoration: none;
+    padding-top: 15px;
+    margin-top: 5%;
+    font-size: larger;
+}
+
+#logo {
+    width: 160px;
+    height: 60px;
+    display: block;
+    margin: auto;
+}
+
+
+label {
+    font-size: 18px;
+    font-family: "Open Sans", sans-serif;
+    color: rgb(55, 55, 55);
+    font-weight: 600;
+
+}
+
+
+#for4inputs input {
+    box-sizing: border-box;
+    margin: 0px;
+    min-width: 0px;
+    display: block;
+    width: 100%;
+    background-color: rgb(242, 242, 242);
+    border-radius: 4px;
+    padding: 10px;
+    border: none;
+    width: 500px;
+    height: 50px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+
+}
+
+
+
+#Maindiv {
+    display: flex;
+}
+
+#heading {
+
+    box-sizing: border-box;
+    margin: 0px;
+    min-width: 0px;
+    font-size: 30px;
+    font-family: "Open Sans", sans-serif;
+    line-height: 32px;
+    color: rgb(55, 55, 55);
+    font-weight: 400;
+    text-align: center;
+    padding-bottom: 5px;
+    padding-top: 20px;
+}
+
+#banner {
+    padding-left: 160px;
+}
+
+form {
+    margin-left: 70px;
+}
+
+#passreq {
+    box-sizing: border-box;
+    margin: 0px 0px 0px 8px;
+    min-width: 0px;
+    font-size: 14px;
+    font-family: "Open Sans", sans-serif;
+    line-height: 22px;
+    font-weight: 400;
+    text-align: left;
+    color: rgb(55, 55, 55);
+    margin-bottom: 15px;
+}
+
+#checkbox1 label {
+    box-sizing: border-box;
+    margin: 0;
+    min-width: 0;
+    font-size: 16px;
+    font-family: "Open Sans", sans-serif;
+    line-height: 20px;
+    color: #373737;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+#checkbox2 label {
+    box-sizing: border-box;
+    margin: 0;
+    min-width: 0;
+    font-size: 16px;
+    font-family: "Open Sans", sans-serif;
+    line-height: 20px;
+    color: #373737;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+#signUpBtn{
+    box-sizing: border-box;
+    margin: 0px;
+    min-width: 0px;
+    display: block;
+    width: 100%;
+    background-color: rgb(242, 242, 242);
+    border-radius: 4px;
+    padding: 10px;
+    border: none;
+    width: 500px;
+    height: 50px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+
+}
+#instructions p{
+    box-sizing: border-box;
+    margin: 0;
+    min-width: 0;
+    font-size: 14px;
+    font-family: "Open Sans", sans-serif;
+    line-height: 20px;
+    color: #373737;
+    font-weight: 400;
+    margin-bottom: 1px;
+
+}
+
+              
