@@ -1,0 +1,43 @@
+* {
+    margin: 2px;
+
+
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #efe4d5
+  }
+  
+  #logo {
+    width: 160px;
+    height: 60px;
+    display: block;
+    margin: auto;
+}
+
+#navbar-signup {
+    background-color: #000033;
+    display: flex;
+    justify-content: space-between;
+  align-items: center;  
+    margin-bottom: 15px;
+}
+
+#navbar-signup a {
+    color: white;
+    text-decoration: none;
+    
+    margin-right: 15px;
+  
+    font-size: larger;
+}
+        .center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+img {
+    width: 50%;
+}

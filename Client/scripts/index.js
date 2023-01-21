@@ -1,5 +1,7 @@
 const categoriesDiv = document.getElementById("categoriesDiv");
 const multipleServicesDiv = document.getElementById("multipleServicesDiv");
+const searchProduct= document.getElementById("searchProduct");
+const searchBtn= document.getElementById("searchBtn")
 
 const categoriesArr = [
   {
@@ -159,3 +161,29 @@ function showProducts(category) {
       window.location.href = "products.html";
     });
 }
+
+// search functionality(deboucing)
+
+// const debounce = (func, delay) => {
+//   let debounceTimer;
+
+//   return function (...args) {
+//     clearInterval(debounceTimer);
+//     debounceTimer = setTimeout(() => func(...args), delay);
+//   };
+// };
+// function find(item) {
+//   console.log(`${item}`);
+// }
+
+// let findproduct=debounce(find,1000)
+searchProduct.addEventListener("keyup",(e)=>{
+  // findproduct(e.target.value)
+  let inputvalue=e.target.value
+   fetch(`https://63c59ffce1292e5bea27a4a8.mockapi.io/products?search=${inputvalue}`)
+.then(res=>{
+  return res.json()
+}).then(res=>{
+  console.log(res)
+})
+})
