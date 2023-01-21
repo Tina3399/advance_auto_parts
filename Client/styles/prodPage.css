@@ -6,6 +6,7 @@
 #main_product_div{
     margin-top: 150px;
     width: 90%;
+    margin-bottom: 50px;
 }
 #main_product_div>div{
     display: flex;
@@ -17,16 +18,11 @@
     width: 200px;
     /* border: 2px solid red; */
     margin: auto;
-    margin-top: 25%;
+    margin-top: 18%;
 }
 
 #main_product{
-    flex: 2;
-    /* border: 2px solid palevioletred; */
-    border-radius: 50%;
-    background-color: rgb(253, 253, 253);
-    /* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+   
    
 }
 
@@ -46,32 +42,11 @@
 
 #floating_div{
     flex: 1;
-    /* border: 2px solid palevioletred; */
+    border: 2px solid palevioletred;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
     border-radius: 25px;
 }
 
-#user_login_tag, #product_added_msg{
-    color: red;
-    text-shadow: rgba(255, 255, 255, 0.4) 0 0 4px,rgba(255, 255, 255, 0.2) 0 0 12px,rgba(206, 197, 218, 0.6) 1px 1px 4px,rgba(57, 31, 91, 0.32) 4px 4px 16px;
-    font-size: 16px;
-}
-
-#add_to_cart_button{
-    background-color: #DE8F19;
-    border-radius: 100px;
-    width: 90%;
-    color: white;
-    cursor: pointer;
-    display: inline-block;
-    font-family: CerebriSans-Regular,-apple-system,system-ui,Roboto,sans-serif;
-    padding: 12px 0;
-    text-align: center;
-    text-decoration: none;
-    border: 0;
-    font-size: 14px;
-    font-weight: 600;
-}
 
 #name_qty_button{
     display: flex;

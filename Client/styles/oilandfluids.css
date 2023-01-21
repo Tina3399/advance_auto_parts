@@ -247,7 +247,7 @@ body{
 }
 
 #nav {
-    width:150vw;
+    width:100%;
     /* border: 2px solid rgb(140, 140, 178); */
     height:70px;
     background-color:white;

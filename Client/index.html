@@ -26,7 +26,21 @@
         </div>
         <div class="wrap">
             <div class="search">
-               <input id="searchProduct" type="text" class="searchTerm" placeholder="What part do you need today?">
+                <form action="">
+                    
+               <input list="magicHouses" id="myHouse" type="text" class="searchTerm"  name="myHouse" placeholder="What part do you need today?">
+               <datalist id="magicHouses">
+                <option value="Gryfindor                                                                                           ">
+                <option value="Hufflepuff">
+                <option value="Slytherin">
+                <option value="Ravenclaw">
+                <option value="Horned Serpent">
+                <option value="Thunderbird">
+                <option value="Pukwudgie">
+                <option value="Wampus">
+              
+              </datalist>
+            </form>
                <button id="searchBtn" type="submit" class="searchButton">
                  <i class="fa fa-search"></i>
               </button>
@@ -39,11 +53,12 @@
       </div>
       <div class="navBarOptions">
         <i class="fa-solid fa-user"></i>
-        <button><a href="">Account</a></button>
+        <button id="loginBtnName"><a href="signUpPage.html"></a></button>
+        <button id="logoutBtn"></button>
       </div>
       <div class="navBarOptions" id="navBarOptionsCart">
-        <i class="fa-solid fa-cart-shopping"></i>
-        <p>0</p>
+        <a href="cartPage.html"> <i class="fa-solid fa-cart-shopping"></i></a>
+        <p id="totalCartItemsCount">0</p>
       </div>
       <div class="navBarOptions">
         <i class="fa-solid fa-user"></i>

@@ -62,8 +62,7 @@ a{
     margin: 30px 0;
     padding: 13px 40px;
     text-align: center;
-    text-decoration: none;
-   
+    text-decoration: none; 
 }
 #text_button_div a{
     text-decoration: none;
@@ -78,8 +77,38 @@ a{
 
 /* main div */
 
+#tableBody{
+    background-color: white;
+   
+}
+
+#tableBody img{
+    /* border: 2px solid black; */
+}
+
+#imageDiv{
+    /* border: 2px solid green; */
+}
+
+#quantityDiv{
+    display: flex;
+    justify-content: space-around;
+    align-content:stretch;
+    /* border: 2px solid red; */
+    
+}
+
+#quantityDiv>button{
+    background-color: white;
+    border: none;
+
+}
+#quantityDiv i{
+    font-size: 25px;
+}
 #cart_items_div{
-    margin-top: 170px;
+    margin-top: 80px;
+    margin-bottom: 50px;
 }
 #cart_items_div img{
     width: 100px;

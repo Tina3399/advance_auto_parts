@@ -47,7 +47,7 @@
     <button><a href="">Account</a></button>
   </div>
   <div class="navBarOptions" id="navBarOptionsCart">
-    <i class="fa-solid fa-cart-shopping"></i>
+   <a href=""> <i class="fa-solid fa-cart-shopping"></i></a>
     <p>0</p>
   </div>
   <div class="navBarOptions">
@@ -71,33 +71,36 @@
   <div id="menu_page_items">
     <div id="1"  class="food_cards">
       <div class="heading_feature_card_filter">
-        <h3>Category : </h3>
-        <select id="filter">
-          <option value="">Display All</option>
-          <option value="lth">Battery</option>
-          <option value="htl">Brake Pads & Shoes</option>
-          <option value="htl">Engine Air Filters</option>
-          <option value="htl">Wiper Blades</option>
-      </select>
+        
+       
+
       <h3>Brand : </h3>
-      <select id="filter">
+      <select id="filter" class="filterStyle">
         <option value="">Display All</option>
-        <option value="lth">Braille Battery</option>
-        <option value="htl">FRAM Drive</option>
-        <option value="htl">Champion</option>
-        <option value="htl">Sierra</option>
-        <option value="htl">Driveworks</option>
-        <option value="htl">Purolator</option>
-        <option value="htl">High To Low</option>
+        <option value="Braille Battery">Braille Battery</option>
+        
+        <option value="Carquest Standard">Carquest Standard</option>
+        <option value="FRAM Drive">FRAM Drive</option>
+        <option value="Sierra">Sierra</option>
+        <option value="Driveworks">Driveworks</option>
+        <option value="Purolator">Purolator</option>
     </select>
       <h3>Price : </h3>
-      <select id="filter">
+      <select id="filterPrice" class="filterStyle">
         <option value="">Display All</option>
-        <option value="lth">$10 - $24.99</option>
-        <option value="htl">$25 - $49.99</option>
-        <option value="htl">$50 - $99.99</option>
-        <option value="htl">$100 and up</option>
+        <option value="10-24">$10 - $24.99</option>
+        <option value="25-49">$25 - $49.99</option>
+        <option value="50-99">$50 - $99.99</option>
+        <option value="100Above">$100 and Above</option>
     </select>
+    <h3>Sort : </h3>
+    <select id="sortPrice" class="filterStyle">
+      <option value="">Display All</option>
+      <option value="htl">High To Low</option>
+      
+      <option value="lth">Low To High</option>
+      
+  </select>
   </div>
      
 <div>

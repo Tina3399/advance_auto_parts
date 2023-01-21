@@ -1,8 +1,25 @@
 const categoriesDiv = document.getElementById("categoriesDiv");
 const multipleServicesDiv = document.getElementById("multipleServicesDiv");
-const searchProduct= document.getElementById("searchProduct");
-const searchBtn= document.getElementById("searchBtn")
-
+const searchProduct = document.getElementById("searchProduct");
+const searchBtn = document.getElementById("searchBtn");
+const loginBtnName = document.getElementById("loginBtnName");
+const logoutBtn = document.getElementById("logoutBtn");
+const cart_arr = JSON.parse(localStorage.getItem("cartProd")) || [];
+console.log(cart_arr.length);
+const totalCartItemsCount = document.getElementById("totalCartItemsCount");
+totalCartItemsCount.textContent = cart_arr.length;
+let isAuth = localStorage.getItem("isAuth") || false;
+if (isAuth) {
+  loginBtnName.textContent = "Abhishek";
+  logoutBtn.innerHTML = '<i class="fa-solid fa-right-from-bracket"></i>';
+} else {
+  loginBtnName.textContent = "Account";
+  loginBtnName.addEventListener("click", () => {
+    window.location.href = "loginPage.html";
+  });
+  loginBtnName.style.cursor = "pointer";
+  logoutBtn.style.display = "none";
+}
 const categoriesArr = [
   {
     imageUrl:
@@ -176,14 +193,12 @@ function showProducts(category) {
 //   console.log(`${item}`);
 // }
 
-// let findproduct=debounce(find,1000)
-searchProduct.addEventListener("keyup",(e)=>{
-  // findproduct(e.target.value)
-  let inputvalue=e.target.value
-   fetch(`https://63c59ffce1292e5bea27a4a8.mockapi.io/products?search=${inputvalue}`)
-.then(res=>{
-  return res.json()
-}).then(res=>{
-  console.log(res)
-})
-})
+// logout user
+
+logoutBtn.addEventListener("click", () => {
+  localStorage.clear("isAuth");
+  loginBtnName.textContent = "Account";
+  logoutBtn.style.display = "none";
+  console.log(isAuth, localStorage.getItem("isAuth"));
+  window.location.href = "loginPage.html";
+});

@@ -50,6 +50,7 @@
         #incorrectCredentials{
             color: red;
             padding-top: 10px;
+            text-align: center;
         }
         .account-type, .gender {
         margin: 15px 0;

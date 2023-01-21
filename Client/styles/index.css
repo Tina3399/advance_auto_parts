@@ -5,8 +5,39 @@
     font-family: TT_Norms_Pro,-apple-system,BlinkMacSystemFont,Helvetica Neue,Segoe UI,Roboto,Oxygen-Sans,Fira Sans,Droid Sans,Ubuntu,Cantarell,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji",Segoe UI Symbol;
 }
 
+/* searchBar css */
+
+form {
+	max-width: 40vw;
+	display: flex;
+	flex-direction: column;
+
+}
+
+form input {
+	border: 2px solid  white;
+	height: 40px;
+	border-radius: 3px;
+	padding: 5px;
+	font-size: 1rem;
+
+}
+
+form input:focus {
+	outline: none;
+}
+
+
+
 /* navbar */
 
+#myHouse{
+/* border: 2px solid red; */
+width: 400px;
+}
+#searchBtn{
+    padding: 5px 10px;
+}
 #navBar{
   display: flex;
   width: 100%;
@@ -86,6 +117,11 @@
     width: 5%;
     color: white;
 }
+
+#logoutBtn{
+    cursor: pointer;
+}
+
 
 /* input box css */
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
@@ -251,7 +287,7 @@ body{
 }
 
 #nav {
-    width:150vw;
+    width:100%;
     /* border: 2px solid rgb(140, 140, 178); */
     height:70px;
     background-color:white;
