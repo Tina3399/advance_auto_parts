@@ -562,24 +562,55 @@
         border-radius: 5px;
         color: #3a3a3a;
       }
-      #view_new_card_preview {
-        margin-top: 1px;
-        width: 300px;
+      #preview_container {
+        line-height: 2rem;
+        margin: 10px auto;
+        width: 350px;
+        padding: 20px;
+        border-radius: 30px 15px 15px 15px;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px,
+          rgba(0, 0, 0, 0.23) 0px 3px 6px;
         height: max-content;
-        /* border: 2px solid black; */
-        box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px,
-          rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
-        display: flex;
-        flex-direction: column;
-        border-radius: 3px;
-        padding: 15px;
+        color: rgb(0, 0, 0);
       }
-      #view_new_card_preview img {
+      #img-container {
         width: 100%;
+        display: flex;
+        justify-content: center;
+      }
+      #preview_container img {
+        width: 250px;
+      }
+      #preview_container p {
+        font-size: 16px;
+        font-weight: 400;
+        margin: 20px 0;
+      }
+      #preview_btn {
+        color: rgb(255, 255, 255);
+        background-color: goldenrod;
+        border: gold;
+        padding: 7px 15px;
+        font-size: 16px;
         border-radius: 5px;
       }
-      #view_new_card_preview_details > div {
-        margin: 10px 0;
+      /* loading  */
+      #orders_loading {
+        width: 35px;
+        margin: auto;
+        margin-top: 40px;
+        display: block;
+      }
+      #users_loading {
+        width: 35px;
+        margin: auto;
+        margin-top: 40px;
+        display: block;
+      }
+      #products_loading {
+        width: 35px;
+        margin: auto;
+        display: block;
       }
     </style>
   </head>
@@ -617,69 +648,12 @@
               <span>No. of Products</span>
               <span>Action</span>
             </div>
-            <div id="all_orders_list">
-              <!-- <div class="one_order_list_card">
-                <div class="order_short_info" style="margin-bottom: 10px">
-                  <span>
-                    <svg>
-                      <path
-                        d="m12.14 8.753-5.482 4.796c-.646.566-1.658.106-1.658-.753V3.204a1 1 0 0 1 1.659-.753l5.48 4.796a1 1 0 0 1 0 1.506z"
-                      />
-                    </svg>
-                    <span>4</span>
-                  </span>
-                  <span>5</span>
-                  <span>3</span>
-                  <span onclick="orderCompleted()" data-id="4"
-                    >Mark As Delivered</span
-                  >
-                </div>
-                <div class="order_detailed_info">
-                  <div class="all_ordered_item_name_list">
-                    <table>
-                      <thead>
-                        <tr>
-                          <th>Product ID</th>
-                          <th>Product Name</th>
-                          <th>Quantity</th>
-                          <th>Pricing</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <td>12</td>
-                          <td>Peppery Chicken Salami (Mini) | Ready To Eat</td>
-                          <td>1</td>
-                          <td>₹169</td>
-                        </tr>
-
-                        <tr>
-                          <td>13</td>
-                          <td>
-                            Chicken Loaf(Smoked &amp; Sliced)| Ready to Eat
-                          </td>
-                          <td>1</td>
-                          <td>₹254</td>
-                        </tr>
-
-                        <tr>
-                          <td>14</td>
-                          <td>Chicken Galantine</td>
-                          <td>1</td>
-                          <td>₹254</td>
-                        </tr>
-                      </tbody>
-                      <tfoot>
-                        <tr>
-                          <th colspan="3">Total Amount</th>
-                          <th>₹857</th>
-                        </tr>
-                      </tfoot>
-                    </table>
-                  </div>
-                </div>
-              </div> -->
-            </div>
+            <div id="all_orders_list"></div>
+            <img
+              src="https://media.tenor.com/wpSo-8CrXqUAAAAi/loading-loading-forever.gif"
+              id="orders_loading"
+              alt=""
+            />
           </div>
         </div>
         <!--   Users  -->
@@ -693,6 +667,11 @@
               <span>Action</span>
             </div>
             <div id="all_users_list"></div>
+            <img
+              src="https://media.tenor.com/wpSo-8CrXqUAAAAi/loading-loading-forever.gif"
+              id="users_loading"
+              alt=""
+            />
           </div>
         </div>
         <!-- Products -->
@@ -703,6 +682,11 @@
         >
           <div id="admin_products_sec_head">All Products</div>
           <div id="product_table"></div>
+          <img
+            src="https://media.tenor.com/wpSo-8CrXqUAAAAi/loading-loading-forever.gif"
+            id="products_loading"
+            alt=""
+          />
         </div>
         <!--  Add Products -->
 
@@ -780,14 +764,23 @@
                 </button>
               </div>
             </div>
-            <div id="view_new_card_preview" style="display: none">
-              <img id="new_product_img_preview" src="" alt="" />
-              <div id="view_new_card_preview_details">
-                <div id="new_product_name_preview"></div>
-                <div id="new_product_des_preview"></div>
-                <div>
-                  <span class="preview_price"></span>
-                </div>
+            <div id="preview_container" style="display: none">
+              <div id="img-container">
+                <img src="" alt="" />
+              </div>
+              <div>
+                <p id="preview_price" style="font-weight: 600; font-size: 26px">
+                  <span id="preview_price_pre_dot"></span
+                  ><sup id="preview_price_post_dot"></sup>
+                </p>
+                <p>
+                  <span
+                    id="preview_title"
+                    style="font-weight: 600; font-size: 20px"
+                  ></span>
+                  <span id="preview_desc"></span>
+                </p>
+                <button id="preview_btn">Add to card</button>
               </div>
             </div>
           </div>
@@ -916,6 +909,8 @@
                 `
               );
             }
+            let orders_loading = document.getElementById("orders_loading");
+            orders_loading.style.display = "none";
             all_orders_list.innerHTML = arrOfallOrders.join(" ");
           });
       }
@@ -951,6 +946,8 @@
                 </div>
               </div>`);
             });
+            let users_loading = document.getElementById("users_loading");
+            users_loading.style.display = "none";
             all_users_list.innerHTML = show_user_list.join(" ");
           });
       }
@@ -1041,6 +1038,8 @@
                 </div>
               `);
         });
+        let products_loading = document.getElementById("products_loading");
+        products_loading.style.display = "none";
         product_table.innerHTML = all_products_Html.join(" ");
       }
       let isEditClicked = false;
@@ -1125,22 +1124,34 @@
           data.push(input_data[i].value);
         let textarea_data = document.querySelector("textarea[data-key]");
         data.push(textarea_data.value);
-        let view_new_card_preview = (document.querySelector(
-          "#view_new_card_preview"
-        ).style.display = "flex");
-        let new_card_img_preview = document
-          .querySelector("#new_product_img_preview")
-          .setAttribute("src", data[4]);
-        let new_product_name_preview = (document.querySelector(
-          "#new_product_name_preview"
-        ).innerText = data[2]);
-        let new_product_des_preview = (document.querySelector(
-          "#new_product_des_preview"
-        ).innerText = data[5]);
-        let preview_price = (document.querySelector(
-          ".preview_price"
-        ).innerText = data[3]);
-        console.log(data);
+
+        let newProductPreviewInput = {
+          category: data[0],
+          sub_category: data[1],
+          title: data[2] || "No Title",
+          price: data[3],
+          img: data[4],
+          description: data[5] || "No Description",
+        };
+        let preview_container = document.querySelector("#preview_container");
+        preview_container.style.display = "block";
+        let img_container = document.querySelector("#preview_container img");
+        img_container.src = newProductPreviewInput.img;
+        let priceArr = newProductPreviewInput.price.split(".");
+        priceArr[0] = priceArr[0] || 0;
+        priceArr[1] = priceArr[1] || 0;
+        let preview_price_pre_dot = document.querySelector(
+          "#preview_price_pre_dot"
+        );
+        preview_price_pre_dot.innerText = `$${priceArr[0]}`;
+        let preview_price_post_dot = document.querySelector(
+          "#preview_price_post_dot"
+        );
+        preview_price_post_dot.innerText = `.${priceArr[1]}`;
+        let preview_title = document.querySelector("#preview_title");
+        preview_title.innerText = newProductPreviewInput.title;
+        let preview_desc = document.querySelector("#preview_desc");
+        preview_desc.innerText = newProductPreviewInput.description;
       }
       async function addNewProduct() {
         previewNewProductCard();
@@ -1160,8 +1171,8 @@
           },
           body: JSON.stringify(obj),
         });
-        let view_new_card_preview = (document.querySelector(
-          "#view_new_card_preview"
+        let preview_container = (document.querySelector(
+          "#preview_container"
         ).style.display = "none");
       }
 
