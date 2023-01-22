@@ -79,8 +79,8 @@
       section {
         width: 80%;
         height: 100vh;
-        overflow-y: scroll;
         border-left: 2px solid black;
+        overflow-y: scroll;
       }
       #admin_orders_main_body,
       #admin_users_main_body,
@@ -846,6 +846,7 @@
               let total_price = 0;
               let arrOfallOrdersDetails = [];
               let orderInfo = orders[i].orderDetails;
+              if (orderInfo.length == 0) continue;
               for (let j = 0; j < orderInfo.length; j++) {
                 let eachOrder = orderInfo[j];
                 total_price += eachOrder.count * eachOrder.price;
@@ -1172,7 +1173,6 @@
           "#preview_container"
         ).style.display = "none");
       }
-
       async function deleteProduct() {
         let product_id = event.target.dataset.id;
         console.log(product_id);
