@@ -6,29 +6,33 @@ logo.addEventListener("click", () => {
   window.location.href = "index.html";
 });
 let loginForm = document.getElementById("loginForm");
-loginForm.addEventListener("submit", function (event) {
+loginForm.addEventListener("submit", async function (event) {
   event.preventDefault();
-
-  fetch("https://63c59ffce1292e5bea27a4a8.mockapi.io/users")
+  let email = document.getElementById("email");
+  let password = document.getElementById("password");
+  await fetch("https://63c59ffce1292e5bea27a4a8.mockapi.io/users")
     .then((res) => res.json())
     .then((data) => {
-      data.forEach((user) => {
+      for (let i = 0; i < data.length; i++) {
+        let user = data[i];
         console.log(user);
-        if (user.email == "xyz@example.com" && user.password == "password") {
+        if (user.email == email.value && user.password == password.value) {
           messageLogin.textContent = "Login Successful!";
+          localStorage.setItem("isAuth", true);
+          
           setTimeout(() => {
             messageLogin.style.display = "none";
             window.location.href = "index.html";
-          }, 3000);
+          }, 300);
+          break;
         } else {
           messageLogin.textContent = "Incorrect Credentials!";
           setTimeout(() => {
             messageLogin.style.display = "none";
           }, 3000);
         }
-      });
+      }
     });
-  localStorage.setItem("isAuth", true);
   messageLogin.style.display = "block";
 });
 

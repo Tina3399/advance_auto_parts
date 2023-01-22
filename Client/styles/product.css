@@ -426,7 +426,7 @@ margin: 4%;
     display: flex;
     color: #b9cfdb;
     /* justify-content: flex-end; */
-    /* border: 5px solid black; */
+    /* border: 5px solid red; */
 }
 .copywright>div{
     display: flex;
@@ -445,3 +445,46 @@ margin: 4%;
     border: none;
     cursor: pointer;
 }
+
+/* responsiveness */
+@media all and (max-width:500px) {
+  
+    .navBarOptions{
+        display: none;
+    }
+    #searchBoxDiv{
+        width: 100%;
+    }
+    .searchButton{
+        margin-left: 60px;
+    }
+
+    .heading_feature_card_filter{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #rightSection{
+          /* border: 2px solid red; */
+    width: 95%;
+    display: grid;
+    margin: auto;
+    grid-template-columns: repeat(2,1fr);
+    }
+    .row2{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        /* gap: 40px; */
+        align-items: center;
+     
+    }
+    /* footer */
+
+    .copywright{
+        display: none;
+    }
+
+}
+
+

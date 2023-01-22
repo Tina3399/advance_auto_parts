@@ -14,46 +14,60 @@
 
     <!-- navbar -->
     <nav id="navBar">
-      <div id="logoImgDiv" >
+        <div id="logoImgDiv" >
         <a href="index.html"> <img src="assets/images/Logo.png" alt=""></a> 
-      </div>
-      <div id="navBarSecondInnerDiv">
-      <div id="searchBoxDiv">
-        <div id="searchCarLogoDiv">
-            <i class="fa-solid fa-car"></i>
-            <p>Search</p>
-
         </div>
-        <div class="wrap">
-            <div class="search">
-               <input type="text" class="searchTerm" placeholder="What part do you need today?">
-               <button type="submit" class="searchButton">
-                 <i class="fa fa-search"></i>
-              </button>
-            </div>
-         </div>
+        <div id="navBarSecondInnerDiv">
+        <div id="searchBoxDiv">
+          <div id="searchCarLogoDiv">
+              <i class="fa-solid fa-car"></i>
+              <p>Search</p>
+  
+          </div>
+          <div class="wrap">
+              <div class="search">
+                  <form action="">
+                      
+                 <input list="magicHouses" id="myHouse" type="text" class="searchTerm"  name="myHouse" placeholder="What part do you need today?">
+                 <datalist id="magicHouses">
+                  <option value="DieHard Lawn & Garden">
+                  <option value="Remanufactured Drive Battery">
+                  <option value="Braille Battery">
+                  <option value="DieHard Red">
+                  <option value="Engine Air Filter">
+                  <option value="Thunderbird">
+                  <option value="TRICO Flex">
+                  <option value="Bosch">
+                
+                </datalist>
+              </form>
+                 <button id="searchBtn" type="submit" class="searchButton">
+                   <i class="fa fa-search"></i>
+                </button>
+              </div>
+           </div>
+        </div>
+        <div class="navBarOptions">
+          <i class="fa-solid fa-location-dot"></i>
+          <button><a href="">Choose a Store</a></button>
+        </div>
+        <div class="navBarOptions">
+          <i class="fa-solid fa-user"></i>
+          <button id="loginBtnName"><a href="signUpPage.html"></a></button>
+          <button id="logoutBtn"></button>
+        </div>
+        <div class="navBarOptions" id="navBarOptionsCart">
+          <a href="cartPage.html"> <i class="fa-solid fa-cart-shopping"></i></a>
+          <p id="totalCartItemsCount">0</p>
+        </div>
+        <div class="navBarOptions">
+          <i class="fa-solid fa-user"></i>
+          <button id ="admin_login_button"><a href="adminLogin.html">Admin</a></button>
+        </div>
+        <div>
       </div>
-      <div class="navBarOptions">
-        <i class="fa-solid fa-location-dot"></i>
-        <button><a href="">Choose a Store</a></button>
-      </div>
-      <div class="navBarOptions">
-        <i class="fa-solid fa-user"></i>
-        <button><a href="">Account</a></button>
-      </div>
-      <div class="navBarOptions" id="navBarOptionsCart">
-        <i class="fa-solid fa-cart-shopping"></i>
-        <p>0</p>
-      </div>
-      <div class="navBarOptions">
-        <i class="fa-solid fa-user"></i>
-        <button><a href="adminLogin.html">Admin</a></button>
-      </div>
-      <div>
-    </div>
-      </div>
-    </nav>
-
+        </div>
+      </nav>
         <!-- navbar2 starts -->
         <nav id="nav">
             <div id="manu" onclick="onclickmenu()">

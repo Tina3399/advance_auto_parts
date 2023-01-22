@@ -85,8 +85,9 @@ label {
 }
 
 #banner>img{
-width: 100%;
+width: 90%;
 height: 100%;
+margin-left: 8%;
 }
 form {
     margin-left: 70px;

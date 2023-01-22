@@ -8,6 +8,30 @@ checkoutBtn.addEventListener("click", checkOutOnClick());
 
 const tbody = document.querySelector("tbody");
 
+
+console.log(cart_arr.length);
+const totalCartItemsCount = document.getElementById("totalCartItemsCount");
+totalCartItemsCount.textContent = cart_arr.length;
+// showCartTotal();
+// function showCartTotal(){
+//   totalCartItemsCount.textContent = cart_arr.length;
+// }
+
+
+
+
+let isAuth = localStorage.getItem("isAuth") || false;
+if (isAuth) {
+  loginBtnName.textContent = "Abhishek";
+  logoutBtn.innerHTML = '<i class="fa-solid fa-right-from-bracket"></i>';
+} else {
+  loginBtnName.textContent = "Account";
+  loginBtnName.addEventListener("click", () => {
+    window.location.href = "loginPage.html";
+  });
+  loginBtnName.style.cursor = "pointer";
+  logoutBtn.style.display = "none";
+}
 // console.log(cart_arr);
 
 show_cart_items(cart_arr);
@@ -81,8 +105,8 @@ function remove_row(index, id) {
   // console.log(cart_arr);
 }
 
-function checkOutOnClick() {
-  fetch("https://63c64dbad307b76967365584.mockapi.io/orders", {
+async function  checkOutOnClick() {
+  await fetch("https://63c64dbad307b76967365584.mockapi.io/orders", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -91,12 +115,8 @@ function checkOutOnClick() {
       orderDetails: cart_arr,
     }),
   })
-    .then((res) => {
-      return res.json();
-    })
-    .then((res) => {
-      // console.log(res);
-    });
+  localStorage.setItem("cartProd", JSON.stringify([]));
+  
 }
 
 // increase prod qty on click;

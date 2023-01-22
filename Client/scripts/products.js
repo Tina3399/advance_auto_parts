@@ -3,7 +3,30 @@ const productsData = JSON.parse(localStorage.getItem("productsData"));
 const paginationWrapper = document.getElementById("paginationWrapper");
 const baseUrl =
   "https://63c59ffce1292e5bea27a4a8.mockapi.io/products?limit=10&page=1";
-const isAuth = localStorage.getItem("isAuth");
+
+
+  const loginBtnName = document.getElementById("loginBtnName");
+const logoutBtn = document.getElementById("logoutBtn");
+  const cart_arr = JSON.parse(localStorage.getItem("cartProd")) || [];
+console.log(cart_arr.length);
+
+
+const totalCartItemsCount = document.getElementById("totalCartItemsCount");
+totalCartItemsCount.textContent = cart_arr.length;
+
+
+  let isAuth = localStorage.getItem("isAuth") || false;
+  if (isAuth) {
+    loginBtnName.textContent = "Abhishek";
+    logoutBtn.innerHTML = '<i class="fa-solid fa-right-from-bracket"></i>';
+  } else {
+    loginBtnName.textContent = "Account";
+    loginBtnName.addEventListener("click", () => {
+      window.location.href = "loginPage.html";
+    });
+    loginBtnName.style.cursor = "pointer";
+    logoutBtn.style.display = "none";
+  }
 const cartProductsArr = JSON.parse(localStorage.getItem("cartProd")) || [];
 const filterBtn = document.getElementById("filter");
 
@@ -39,11 +62,13 @@ function showProducts(productsData) {
     cartBtn.addEventListener("click", () => {
       addToCart(item.id, item, message);
     });
+    
     imgDiv.append(image);
     container.append(imgDiv, price, brandName, description, message, cartBtn);
     rightSection.append(container);
   });
 }
+
 
 // add to cart
 
@@ -66,16 +91,22 @@ function addToCart(id, item, message) {
       setTimeout(() => (message.style.display = "none"), 3000);
       console.log(flag);
       cartProductsArr.push({ ...item, count: 1 });
+      setTimeout(()=>{
+        location.reload()
+      },2000)
+    
     }
     localStorage.setItem("cartProd", JSON.stringify(cartProductsArr));
   }
   message.style.display = "block";
   console.log(cartProductsArr);
+
 }
+
 
 // filter
 
-filterBtn.addEventListener("click", (e) => {
+filterBtn.addEventListener("change", (e) => {
   if (e.target.value === "") {
     showProducts(productsData);
   } else {
@@ -89,7 +120,7 @@ filterBtn.addEventListener("click", (e) => {
 
 // filterPriceBtn
 
-filterPriceBtn.addEventListener("click", (e) => {
+filterPriceBtn.addEventListener("change", (e) => {
   if (e.target.value === "10-24") {
     const filterData = productsData.filter((el) => {
       return el.price >= 10 && el.price <= 24;
@@ -117,7 +148,7 @@ filterPriceBtn.addEventListener("click", (e) => {
 
 // sort Price
 
-sortPriceBtn.addEventListener("click", (e) => {
+sortPriceBtn.addEventListener("change", (e) => {
   if (e.target.value === "htl") {
     const sortedData = productsData.sort((a, b) => b.price - a.price);
     showProducts(sortedData);
@@ -142,3 +173,10 @@ function showProductDetails(id, item) {
   }
   window.location.href = "prodPage.html";
 }
+logoutBtn.addEventListener("click", () => {
+  localStorage.clear("isAuth");
+  loginBtnName.textContent = "Account";
+  logoutBtn.style.display = "none";
+  console.log(isAuth, localStorage.getItem("isAuth"));
+  window.location.href = "loginPage.html";
+});

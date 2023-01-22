@@ -28,25 +28,23 @@
                 <div id="for4inputs">
                     <div>
                         <label for="">First Name</label> <br>
-                        <input id="input1" type="text" placeholder="Enter First Name">
+                        <input id="input1" type="text" placeholder="Enter First Name" required>
                     </div>
                     <div>
                         <label for="">Last Name</label> <br>
-                        <input id="input2" type="text" placeholder="Enter Last Name">
+                        <input id="input2" type="text" placeholder="Enter Last Name" required>
                     </div>
                     <div>
                         <label for="">Email Address</label> <br>
-                        <input id="input3" type="email" placeholder="Enter Email Address">
+                        <input id="input3" type="email" placeholder="Enter Email Address" required>
                     </div>
                     <div>
                         <label for="">Mobile Number</label> <br>
-                        <input id="input4" type="number" placeholder="Enter Mobile Number">
-
-
+                        <input id="input4" type="text"  placeholder="Enter Mobile Number" maxlength="10" pattern="[0-9]{1}[0-9]{9}" requireds >
                     </div>
                     <div>
                         <label for="">Password</label> <br>
-                        <input id="input5" type="password" placeholder="Enter Password">
+                        <input id="input5" type="password" placeholder="Enter Password" required>
                     </div>
                     
                 </div>
@@ -72,7 +70,7 @@
             <img src="https://shop.advanceautoparts.com/images/speedperks-rewards-banner.png" alt="">
         </div>
 
+        <script src="scripts/signUpPage.js"></script>
 </body>
-<script src="scripts/signUpPage.js"></script>
 
 </html>

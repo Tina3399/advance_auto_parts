@@ -12,6 +12,9 @@ form.addEventListener("submit", (e) => {
   };
   if (admin.username === "Jayesh" && admin.password === "hotwheels") {
     incorrectCredentials.textContent = "Login Successful!";
+    setTimeout(() => {
+      window.location.href = "admin_page/adminPortal.html";
+    }, 1000);
   } else {
     incorrectCredentials.textContent = "Incorrect Credentials!";
   }

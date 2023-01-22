@@ -29,7 +29,8 @@
 
 #allContent {
     display: flex;
-    justify-content: space-around
+    justify-content: space-around;
+    margin-left: 10%;
 }
 
 #L1 {
@@ -125,6 +126,7 @@
     text-align: center;
     /* margin-left: 30%; */
     /* margin-bottom: 25px; */
+    
 }
 #createAcc{
     box-sizing: border-box;
@@ -153,4 +155,16 @@
 #closebtn{
     margin-right: 20px;
     margin-top: 18px;
+}
+#banners>img{
+ 
+    width:80%;
+}
+
+
+@media all and (max-width:500px) {
+   #banners>img{
+    display: none;
+   }
+  
 }

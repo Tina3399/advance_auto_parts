@@ -8,6 +8,10 @@ const cart_arr = JSON.parse(localStorage.getItem("cartProd")) || [];
 console.log(cart_arr.length);
 const totalCartItemsCount = document.getElementById("totalCartItemsCount");
 totalCartItemsCount.textContent = cart_arr.length;
+// showCartTotal();
+// function showCartTotal(){
+//   totalCartItemsCount.textContent = cart_arr.length;
+// }
 let isAuth = localStorage.getItem("isAuth") || false;
 if (isAuth) {
   loginBtnName.textContent = "Abhishek";
